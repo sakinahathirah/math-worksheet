@@ -1,16 +1,15 @@
 {
   "name": "math-worksheet",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "homepage": "https://sakinahathirah.github.io/math-worksheet",
   "type": "module",
   "scripts": {
+    "predeploy": "vite build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "preview": "vite preview"
   },
   "dependencies": {
     "lottie-react": "^2.4.1",
