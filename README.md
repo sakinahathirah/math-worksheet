@@ -1,12 +1,34 @@
-# React + Vite
+# Math Quiz Worksheet – Fun & Interactive!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🎉 **Math Quiz Worksheet** is a playful and interactive web application designed for kids to practice rounding off numbers to the nearest 10. It combines colorful visuals, animations, and fun interactions to make learning math enjoyable and engaging.  
 
-Currently, two official plugins are available:
+The project is built with **React**, **Vite**, and modern web technologies, featuring:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Responsive design for desktop, tablet, and mobile
+- Bright pastel color theme and kid-friendly UI
+- Animated mascot and confetti effects
+- Progress tracking and scoring system
+- Fun badges and motivational messages
 
-## Expanding the ESLint configuration
+🔗 **Live Preview:** [https://math-quiz-worksheet.netlify.app/](https://math-quiz-worksheet.netlify.app/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Features
+
+- Fun and interactive quiz experience for children
+- Animated mascot that guides the user
+- Score calculation with badges (Gold, Silver, Bronze)
+- Motivational messages and fun facts
+- Progress bar and navigation for seamless quiz flow
+- Responsive and accessible design
+
+---
+
+## Tech Stack
+
+- **React** – UI development  
+- **Vite** – Fast build and development tooling  
+- **CSS3 / Flexbox / Animations** – Playful, responsive design  
+- **React Router** – Navigation between pages  
+- **React Confetti** – Celebration effects for correct answers and quiz completion  
