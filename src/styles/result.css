@@ -1,0 +1,78 @@
+/* Page */
+.result-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 16px;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+/* Title */
+.result-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2rem;
+  color: #FF6F61;
+  margin-bottom: 16px;
+}
+
+/* Score Card */
+.score-card {
+  background: #FFF9E6;
+  padding: 20px 40px;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  margin-bottom: 16px;
+}
+
+.score {
+  font-size: 2.5rem;
+  color: #1E90FF;
+  margin-bottom: 8px;
+}
+
+.badge {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.badge.gold { background-color: #FFD700; color: #333; }
+.badge.silver { background-color: #C0C0C0; color: #333; }
+.badge.bronze { background-color: #CD7F32; color: #fff; }
+
+/* Fun Fact */
+.fun-fact {
+  margin: 16px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Buttons */
+.result-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.result-btn { 
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .result-title { font-size: 1.5rem; }
+  .score { font-size: 2rem; }
+  .badge { font-size: 1rem; padding: 6px 12px; }
+  .result-btn { padding: 10px 20px; font-size: 0.9rem; }
+}

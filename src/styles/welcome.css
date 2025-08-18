@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;700&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100vh; 
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #FFF8DC 0%, #FFFAE3 100%);
+  overflow: hidden; 
+}
+
+/* Main container */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Title */
+.welcome-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2rem;
+  text-align: center;
+  color: #FF6F61; 
+  margin-bottom: 20px;
+  animation: titleBounce 1s ease-out;
+}
+
+@keyframes titleBounce {
+  0% { transform: translateY(-30px); opacity: 0; }
+  60% { transform: translateY(10px); opacity: 1; }
+  100% { transform: translateY(0); }
+}
+
+/* Confetti wrapper */
+.confetti-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #FFB6C1;
+  opacity: 0.8;
+  top: -10px;
+  animation: confettiFall 5s linear infinite;
+}
+
+.confetti:nth-child(2) { left: 20%; animation-delay: 0.5s; background-color: #FFD700; }
+.confetti:nth-child(3) { left: 50%; animation-delay: 1s; background-color: #ADFF2F; }
+.confetti:nth-child(4) { left: 80%; animation-delay: 1.5s; background-color: #87CEFA; }
+
+@keyframes confettiFall {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+/* Mascot */
+.mascot-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: center;
+  position: relative;
+}
+
+.mascot {
+  width: auto;       
+  max-width: 200px;  
+  transform: scale(1.5); 
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+  0% { transform: translateX(-100px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+/* Speech bubble */
+.speech-bubble {
+  background: #FFFAE3;
+  border-radius: 20px;
+  padding: 12px 20px;
+  max-width: 280px;
+  margin-left: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.mascot-text {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Input field */
+.welcome-input {
+  padding: 15px 20px;
+  width: 280px;
+  max-width: 90%;
+  border-radius: 25px;
+  border: 2px solid #FFB6C1;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.welcome-input:focus {
+  border-color: #87CEFA;
+  box-shadow: 0 0 10px #87CEFA;
+  transform: scale(1.05);
+}
+
+/* Button */
+.welcome-btn {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: white;
+  background-color: #1E90FF;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.welcome-btn:hover {
+  background-color: #63B8FF;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+.welcome-btn:active {
+  transform: translateY(1px) scale(0.95);
+}
+
+/* Footer */
+.welcome-footer {
+  position: absolute;
+  bottom: 10px;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .welcome-title {
+    font-size: 1.5rem;
+  }
+  .mascot {
+    width: 100px;
+  }
+  .welcome-input {
+    width: 240px;
+  }
+  .welcome-btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+}

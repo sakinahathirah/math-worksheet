@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;700&display=swap');
+
+/* Base resets and body */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #FFF8DC 0%, #FFFAE3 100%);
+  overflow: hidden;
+}
+
+/* Standard spacing: 8-16-32 rule */
+.m-8 { margin: 8px; }
+.m-16 { margin: 16px; }
+.m-32 { margin: 32px; }
+
+.p-8 { padding: 8px; }
+.p-16 { padding: 16px; }
+.p-32 { padding: 32px; }
+
+/* Confetti wrapper */
+.confetti-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  opacity: 0.8;
+  top: -10px;
+  animation: confettiFall 5s linear infinite;
+}
+
+.confetti:nth-child(2) { left: 20%; animation-delay: 0.5s; }
+.confetti:nth-child(3) { left: 50%; animation-delay: 1s; }
+.confetti:nth-child(4) { left: 80%; animation-delay: 1.5s; }
+
+@keyframes confettiFall {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+/* Buttons - common style */
+button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .text-lg { font-size: 1.2rem; }
+  .text-xl { font-size: 1.5rem; }
+  .text-2xl { font-size: 2rem; }
+  .text-3xl { font-size: 2.5rem; }
+}
