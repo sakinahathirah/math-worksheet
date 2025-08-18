@@ -1,14 +1,12 @@
 {
   "name": "math-worksheet",
   "private": true,
-  "version": "0.1.0",
-  "homepage": "https://sakinahathirah.github.io/math-worksheet",
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeploy": "vite build",
-    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
+    "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
