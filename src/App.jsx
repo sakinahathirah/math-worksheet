@@ -16,8 +16,11 @@ function App() {
         <Route path="/result" element={<Result/> }/>
       </Routes>
 
-      <div class="cloud cloud-left"></div>
-      <div class="cloud cloud-right"></div>
+      <div className="cloud-band" aria-hidden="true">
+        <div className="cloud cloud-left"></div>
+        <div className="cloud cloud-right"></div>
+      </div>
+
    </div>
   )
 }

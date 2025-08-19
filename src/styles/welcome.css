@@ -15,7 +15,6 @@ body, html {
   overflow: hidden; 
 }
 
-/* Main container */
 .welcome-container {
   display: flex;
   flex-direction: column;
@@ -27,7 +26,6 @@ body, html {
   overflow: hidden;
 }
 
-/* Title */
 .welcome-title {
   font-family: 'Fredoka One', cursive;
   font-size: 2rem;
@@ -43,7 +41,6 @@ body, html {
   100% { transform: translateY(0); }
 }
 
-/* Confetti wrapper */
 .confetti-wrapper {
   position: absolute;
   top: 0;
@@ -74,7 +71,6 @@ body, html {
   100% { transform: translateY(100vh) rotate(360deg); }
 }
 
-/* Mascot */
 .mascot-container {
   display: flex;
   align-items: center;
@@ -95,7 +91,6 @@ body, html {
   100% { transform: translateX(0); opacity: 1; }
 }
 
-/* Speech bubble */
 .speech-bubble {
   background: #FFFAE3;
   border-radius: 20px;
@@ -116,7 +111,6 @@ body, html {
   text-align: center;
 }
 
-/* Input field */
 .welcome-input {
   padding: 15px 20px;
   width: 280px;
@@ -136,7 +130,6 @@ body, html {
   transform: scale(1.05);
 }
 
-/* Button */
 .welcome-btn {
   padding: 15px 40px;
   font-size: 1.2rem;
@@ -162,7 +155,6 @@ body, html {
   transform: translateY(1px) scale(0.95);
 }
 
-/* Footer */
 .welcome-footer {
   position: absolute;
   bottom: 10px;
@@ -171,7 +163,6 @@ body, html {
   z-index: 1;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .welcome-title {
     font-size: 1.5rem;

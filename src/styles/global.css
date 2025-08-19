@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;700&display=swap');
 
-/* Base resets and body */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,7 +13,6 @@ body, html {
   overflow: hidden;
 }
 
-/* Standard spacing: 8-16-32 rule */
 .m-8 { margin: 8px; }
 .m-16 { margin: 16px; }
 .m-32 { margin: 32px; }
@@ -23,7 +21,6 @@ body, html {
 .p-16 { padding: 16px; }
 .p-32 { padding: 32px; }
 
-/* Confetti wrapper */
 .confetti-wrapper {
   position: absolute;
   top: 0;
@@ -53,7 +50,6 @@ body, html {
   100% { transform: translateY(100vh) rotate(360deg); }
 }
 
-/* Buttons - common style */
 button {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
@@ -68,7 +64,6 @@ button:hover {
   box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
-/* Responsive utilities */
 @media (max-width: 768px) {
   .text-lg { font-size: 1.2rem; }
   .text-xl { font-size: 1.5rem; }
@@ -76,44 +71,76 @@ button:hover {
   .text-3xl { font-size: 2.5rem; }
 }
 
+:root{
+  --cloud-band: clamp(90px, 16vh, 170px);
+}
 
+.cloud-band{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--cloud-band);
+  pointer-events: none;      
+  z-index: 0;                
+}
 
-.cloud {
+.cloud{
   position: absolute;
-  width: 180px;
-  height: 60px;
+  width: clamp(220px, 34vw, 520px);
+  height: clamp(64px, 12vh, 120px);
   background: #ccc;
   border-radius: 50px;
+  bottom: -12px;             
+  box-shadow: inset -10px -10px 30px rgba(0,0,0,0.08);
 }
 
 .cloud::before,
-.cloud::after {
+.cloud::after{
   content: "";
   position: absolute;
   background: inherit;
-  width: 100px;
-  height: 100px;
-  top: -40px;
   border-radius: 50%;
+  box-shadow: inset -8px -8px 20px rgba(0,0,0,0.06);
 }
 
-.cloud::before {
-  left: 10px;
+.cloud::before{
+  width: 55%;
+  aspect-ratio: 1 / 1;
+  top: -40%;
+  left: 8%;
 }
 
-.cloud::after {
-  right: 10px;
+.cloud::after{
+  width: 65%;
+  aspect-ratio: 1 / 1;
+  top: -48%;
+  right: 6%;
 }
 
-.cloud-left {
-  bottom: -20px;
-  left: -40px;
-  background: #b3d9ff; 
+.cloud-left{
+  left: -6vw;
+  background: #b3d9ff;   
 }
 
-.cloud-right {
-  bottom: -20px;
-  right: -40px;
-  background: #ffb366; 
+.cloud-right{
+  right: -6vw;
+  background: #ffb366;   
+}
+
+.page-content, footer{
+  position: relative;
+  z-index: 1;
+}
+
+.page-content{
+  padding-bottom: calc(var(--cloud-band) + 16px);
+}
+
+/* Respect iOS safe area if present */
+@supports (padding: max(0px)) {
+  .page-content{
+    padding-bottom: max(calc(var(--cloud-band) + 16px), env(safe-area-inset-bottom));
+  }
 }
 
