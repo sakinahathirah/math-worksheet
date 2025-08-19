@@ -35,8 +35,8 @@ function Quiz(){
         <div className="quiz-page">
             <header className="quiz-header">
                 <div className="user-info">
-                    <img src="/avatar.png" alt="avatar" className="avatar"/>
-                    <span className="user-name">{userName}</span>
+                    {/* <img src="/avatar.png" alt="avatar" className="avatar"/> */}
+                    <span className="user-name">Hi {userName}, let's go...</span>
                 </div>
                 <h1 className="quiz-title">Rounding Off Quiz</h1>
             </header>

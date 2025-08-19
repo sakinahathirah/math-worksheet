@@ -111,25 +111,28 @@
   color: #333;
 }
 
-.option:hover { background-color: #FFEBCC; transform: scale(1.03); }
+/* .option:hover { background-color: #FFEBCC; transform: scale(1.03); } */
 
-.option input:checked + .option-text {
+.option:active {
+  background-color: #FFEBCC;
+  transform: scale(1.03);
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+  .option:hover {
+    background-color: #FFEBCC;
+    transform: scale(1.03);
+  }
+}
+
+
+.option input[type="radio"]:checked + .option-text {
   background-color: #1E90FF;
   color: #fff;
   padding: 8px 12px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(30,144,255,0.4);
-}
-
-.option:active,
-.option:focus,
-.option:focus-within {
-  background-color: #FFF !important; 
-}
-
-.option:hover {
-  background-color: #FFEBCC;
-  transform: scale(1.03);
 }
 
 
@@ -143,10 +146,7 @@
 .next-btn { background-color: #1E90FF; color: #fff; }
 .submit-btn { background-color: #FFD700; color: #333; }
 
-/* Animation */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px);}
   to { opacity: 1; transform: translateY(0);}
 }
-
-

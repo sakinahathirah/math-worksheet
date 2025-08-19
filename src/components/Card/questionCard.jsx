@@ -1,7 +1,6 @@
 
 import { useQuiz } from "../../contexts/QuizContext";
 
-
 function QuestionCard({question, onNext, onPrevious, isFirstQuestion, isLastQuestion}){
     const { answers, submitAnswer } = useQuiz();
 
@@ -24,7 +23,10 @@ function QuestionCard({question, onNext, onPrevious, isFirstQuestion, isLastQues
                     name={`question-${question.id}`}
                     value={option}
                     checked={answers[question.id]  === option}
-                    onChange={() => handleSelect(option)}
+                    onChange={() => {
+                        handleSelect(option);
+                        e.currentTarget.blur(); 
+                    }}
                     />
                     <span className="option-text">{option}</span>
                 </label>

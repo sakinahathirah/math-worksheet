@@ -1,14 +1,16 @@
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/welcome.css"; 
 import pencil from "../assets/animations/pencil.gif";
+import music from "../assets/sounds/happy.mp3"
 
 function Welcome() {
   const navigate = useNavigate();
   const [name, setName] = useState("");
   const [displayedText, setDisplayedText] = useState("");
   const text = "Hi there! I'm Fin. Let's be friend. What's your name? 🥳";
+  const audioRef = useRef(null);
 
   useEffect(() => {
     let index = 0;
@@ -16,9 +18,18 @@ function Welcome() {
       setDisplayedText(text.slice(0, index + 1));
       index++;
       if (index === text.length) clearInterval(interval);
-    }, 100); // typing speed
+    }, 100); 
     return () => clearInterval(interval);
   }, [text]);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (audio) {
+      audio.play().catch(err => {
+        console.log("Autoplay blocked by browser:", err);
+      });
+    }
+  }, []);
 
   const handleStart = () => {
     if (name.trim() === "") {
@@ -68,6 +79,9 @@ function Welcome() {
       </button>
 
       <p className="welcome-footer">Copyright © www.mathinenglish.com</p>
+
+      <audio ref={audioRef} src="/music.mp3" autoPlay loop />
+
     </div>
   );
 }

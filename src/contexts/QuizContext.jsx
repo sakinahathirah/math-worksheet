@@ -13,20 +13,15 @@ export const QuizProvider = ({children})=>{
                 ...prev,
                 [questionId]: selectedOption
             };
-            console.log('updatedAnswers',updatedAnswers)
             return updatedAnswers;
         });
     };
 
     const calculateScore = (questions) => {
         let newScore = 0;
-        console.log('length',questions.length)
         questions.forEach((q) => {
-            console.log('selectedAns',answers[q.id])
-            console.log('correctAns',q.correctAnswer)
         if (answers[q.id] === q.correctAnswer) {
             newScore++;
-            console.log('newScore: ', newScore)
         }
         });
         setScore(newScore);
