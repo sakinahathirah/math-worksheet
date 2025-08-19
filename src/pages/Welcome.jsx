@@ -67,7 +67,7 @@ function Welcome() {
         Start Quiz 🚀
       </button>
 
-      <p className="welcome-footer">Copyright © MathInEnglish</p>
+      <p className="welcome-footer">Copyright © www.mathinenglish.com</p>
     </div>
   );
 }
