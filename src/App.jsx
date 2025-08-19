@@ -9,11 +9,16 @@ import Result from './pages/Result'
 function App() {
 
   return (
-    <Routes>
-      <Route path="/" element={<Welcome/> }/>
-      <Route path="/quiz" element={<Quiz/> }/>
-      <Route path="/result" element={<Result/> }/>
-    </Routes>
+   <div>
+      <Routes>
+        <Route path="/" element={<Welcome/> }/>
+        <Route path="/quiz" element={<Quiz/> }/>
+        <Route path="/result" element={<Result/> }/>
+      </Routes>
+
+      <div class="cloud cloud-left"></div>
+      <div class="cloud cloud-right"></div>
+   </div>
   )
 }
 

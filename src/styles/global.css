@@ -75,3 +75,45 @@ button:hover {
   .text-2xl { font-size: 2rem; }
   .text-3xl { font-size: 2.5rem; }
 }
+
+
+
+.cloud {
+  position: absolute;
+  width: 180px;
+  height: 60px;
+  background: #ccc;
+  border-radius: 50px;
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: inherit;
+  width: 100px;
+  height: 100px;
+  top: -40px;
+  border-radius: 50%;
+}
+
+.cloud::before {
+  left: 10px;
+}
+
+.cloud::after {
+  right: 10px;
+}
+
+.cloud-left {
+  bottom: -20px;
+  left: -40px;
+  background: #b3d9ff; 
+}
+
+.cloud-right {
+  bottom: -20px;
+  right: -40px;
+  background: #ffb366; 
+}
+
