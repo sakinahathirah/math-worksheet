@@ -121,6 +121,18 @@
   box-shadow: 0 4px 10px rgba(30,144,255,0.4);
 }
 
+.option:active,
+.option:focus,
+.option:focus-within {
+  background-color: #FFF !important; 
+}
+
+.option:hover {
+  background-color: #FFEBCC;
+  transform: scale(1.03);
+}
+
+
 .navigation {
   display: flex;
   gap: 12px;
@@ -137,8 +149,4 @@
   to { opacity: 1; transform: translateY(0);}
 }
 
-input[type="radio"]:focus {
-  outline: none;
-  box-shadow: none;
-}
 
